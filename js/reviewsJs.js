@@ -5,7 +5,7 @@ function httpGet(theUrl)
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
-const response = httpGet("https://script.google.com/macros/s/AKfycbwokNZQiopQ56xriRq0jmwz6oSbfj_MeruiUQYLPdxubVeezosDI7W2hda1a_Ueif4H3g/exec");
+const response = httpGet("https://script.google.com/macros/s/AKfycbwV4bIt0OCCZRDQtnPXrb6NyGXY8VHjAttps50HxNAgkBcsmZkdhjNdMea0gHnTIWS4/exec");
 var reviewLength = 20;
 var reviewInit = 0;
 const jData = JSON.parse(response);
