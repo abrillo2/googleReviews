@@ -4,5 +4,5 @@ function httpGet(theUrl){
                     xmlHttp.send( null );
                     return xmlHttp.responseText;
 }
-const response = httpGet("https://script.google.com/macros/s/AKfycbztfObrkDrGDgZeVxxcmCzmb-k-3mjYzxqT4UxLSNQOOK7osIEN0jM58h5sKSxAkIkQnQ/exec");
+const response = httpGet("https://script.google.com/macros/s/AKfycbwV4bIt0OCCZRDQtnPXrb6NyGXY8VHjAttps50HxNAgkBcsmZkdhjNdMea0gHnTIWS4/exec");
 console.log(JSON.stringify(response));
