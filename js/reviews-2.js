@@ -1,15 +1,19 @@
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xhr.onload = () => {
+        const jData = JSON.parse(xmlHttp.responseText);
+        const data = jData.data;
+        showReviews(data);
+    };
+    xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
     xmlHttp.send( null );
-    return xmlHttp.responseText;
+    //return xmlHttp.responseText;
 }
-const response = httpGet("https://script.google.com/macros/s/AKfycbwV4bIt0OCCZRDQtnPXrb6NyGXY8VHjAttps50HxNAgkBcsmZkdhjNdMea0gHnTIWS4/exec");
+httpGet("https://script.google.com/macros/s/AKfycbwV4bIt0OCCZRDQtnPXrb6NyGXY8VHjAttps50HxNAgkBcsmZkdhjNdMea0gHnTIWS4/exec");
 var reviewLength = 9;
 var reviewInit = 0;
-const jData = JSON.parse(response);
-const data = jData.data;
+
 
 let topReviewsContainer = document.getElementById("topReviewsContainer");
 
@@ -19,8 +23,8 @@ topReviewsContainer.innerHTML+=`<div id="reviewCards" class="grid-container">
 
 
 
-showReviews();
-function showReviews() {
+
+function showReviews(data) {
     let reviewCards = document.getElementById("reviewCards");
     let limit = data.length<reviewLength?data.length:reviewLength;
     let init =  data.length<reviewInit?data.length:reviewInit;
