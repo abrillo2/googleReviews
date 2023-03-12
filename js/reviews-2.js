@@ -1,7 +1,7 @@
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
-    xhr.onload = () => {
+    xmlHttp.onload = () => {
         const jData = JSON.parse(xmlHttp.responseText);
         const data = jData.data;
         showReviews(data);
