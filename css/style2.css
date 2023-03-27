@@ -46,24 +46,24 @@ figure.snip1390 *:after {
 figure.snip1390 figcaption {
   width: 100%;
 }
-figure.snip1390.ph3,
-figure.snip1390.ph4,
+figure.snip1390 h3,
+figure.snip1390 h4,
 figure.snip1390 .blockquote {
   margin: 0;
 }
-figure.snip1390.ph3{
+figure.snip1390 h3{
   font-weight: 200;
 }
-figure.snip1390.ph4 {
+figure.snip1390 h4 {
   font-weight: 100;
   font-size: small;
 }
-figure.snip1390.ph3 {
+figure.snip1390 h3 {
   color: #0a0909;
   white-space: nowrap;
   overflow: hidden;
 }
-figure.snip1390.ph4 {
+figure.snip1390 h4 {
   color: #a6a6a6;
 }
 figure.snip1390 .blockquote {
