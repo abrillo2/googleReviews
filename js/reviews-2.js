@@ -57,8 +57,8 @@ function showReviews(data) {
                             <div id="firstRow">
                                 <img src="`+profile+`" alt="profile-sample`+index+`" class="profile" />
                                 <div id="nameDate">
-                                    <h3>`+userName+`</h3>
-                                    <h4>`+dateStr+`</h4>
+                                    <p class="ph3">`+userName+`</p>
+                                    <p class="ph3">`+dateStr+`</p>
                                 </div>
                             </div>
                             <span class="hint-star star">
