@@ -37,7 +37,7 @@ function showReviews(data) {
             const star = element[2];
             const profile = element[3];
             const date = new Date(element[4]);
-            const dateStr ="";//date.getDate()? date.getDate()+"/"+(Number(date.getMonth())+1)+"/"+date.getFullYear():element[4];
+            const dateStr =date.getDate()? date.getDate()+"/"+(Number(date.getMonth())+1)+"/"+date.getFullYear():element[4];
             const link = element[4];
             const cLength = comment.length;
             const displayStyle = cLength > 230?"block":"none";
