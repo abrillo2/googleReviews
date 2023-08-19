@@ -19,7 +19,8 @@
 
 
 figure.snip1390 {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto';
+  font-weight: 400;
   position: relative;
   overflow: hidden;
   min-width: 330px;
