@@ -64,7 +64,7 @@ function showReviews(data) {
                             <div class="googleLogo">
                                 <a href="https://www.google.com/maps/place/B.I.G.+Charity+Law+Group/@43.7316872,-79.4360465,12z/data=!3m1!5s0x882b34d2a0333477:0xdef2b13832eada8!4m12!1m2!2m1!1sbig+charity+law+group!3m8!1s0x882b358e449eeae7:0x8d01f850817fc9f7!8m2!3d43.6491287!4d-79.3816683!9m1!1b1!15sChViaWcgY2hhcml0eSBsYXcgZ3JvdXBaFyIVYmlnIGNoYXJpdHkgbGF3IGdyb3VwkgEGbGF3eWVy4AEA!16s%2Fg%2F11h6dhxs_s?entry=ttu"><img src="https://uploads-ssl.webflow.com/64dd2e39c72583e99b7fae9e/655bd1b92642b4887a92fd29_gicon.png" alt="profile-sample0" class="googleIcon"></a>
                             </div>
-                            <p class="reviewText">Reviews</p>
+                            <span class="reviewText">Reviews</span>
                             <span class="hint-star star">
                             <span class="starCount">`+star+`</span>`+starReview+` </span>
                             </span>
