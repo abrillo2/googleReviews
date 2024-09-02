@@ -3,9 +3,9 @@
    <soapenv:Body>
       <sol:SolicitudEncuesta>
          <CabeceraSolicitud>
-            <NumeroOrden>info_required</NumeroOrden>
-            <CodigoControl>info_required</CodigoControl>
-            <CorreoElectronico>email</CorreoElectronico>
+            <NumeroOrden>info</NumeroOrden>
+            <CodigoControl>info</CodigoControl>
+            <CorreoElectronico>info</CorreoElectronico>
          </CabeceraSolicitud>
          <Encuesta xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
    </soapenv:Body>
