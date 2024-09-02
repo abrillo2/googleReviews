@@ -1,117 +1,12 @@
-<wsdl:definitions xmlns:impl="urn:SolicitudEncuestaWS" 
-                  xmlns:tns1="https://arce.ine.es/ARCE/ficheros/SolicitudEncuesta.xsd" 
-                  xmlns:tns2="https://arce.ine.es/ARCE/ficheros/RespuestaSolicitud.xsd" 
-                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-                  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
-                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-                  targetNamespace="urn:SolicitudEncuestaWS">
-  
-  <wsdl:types>
-    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" 
-                targetNamespace="https://arce.ine.es/ARCE/ficheros/ServicioXmlTurismo.wsdl">
-      <xsd:import namespace="https://arce.ine.es/ARCE/ficheros/SolicitudEncuesta.xsd" 
-                  schemaLocation="SolicitudEncuesta.xsd"/>
-      <xsd:import namespace="https://arce.ine.es/ARCE/ficheros/RespuestaSolicitud.xsd" 
-                  schemaLocation="RespuestaSolicitud.xsd"/>
-    </xsd:schema>
-  </wsdl:types>
-  
-  <wsdl:message name="procesarSolicitudEncuestaRequest">
-    <wsdl:part name="oSolicitudEncuesta" element="tns1:SolicitudEncuesta">
-      <tns1:SolicitudEncuesta>
-        <Propiedad>Hotel Estepona Plaza</Propiedad>
-        <CiudadNacimiento>PL</CiudadNacimiento>
-        <DireccionResidencia></DireccionResidencia>
-        <FechaSalida>25-08-2024</FechaSalida>
-        <PaisResidencia>Poland</PaisResidencia>
-        <NochesEstancia>1</NochesEstancia>
-        <FechaEntrada>24-08-2024</FechaEntrada>
-        <CodigoPostalResidencia></CodigoPostalResidencia>
-        <Nombre>Kamil</Nombre>
-        <PrimerApellido>Krupa</PrimerApellido>
-        <PaisNacimiento></PaisNacimiento>
-        <NumeroDocumento>DHG144171</NumeroDocumento>
-        <Nacionalidad>Poland</Nacionalidad>
-        <FechaNacimiento>1985-05-14</FechaNacimiento>
-        <NombreCompleto>Kamil Krupa</NombreCompleto>
-        <SegundoApellido></SegundoApellido>
-        <Sexo>M</Sexo>
-        <CiudadResidencia></CiudadResidencia>
-        <Ciudadania></Ciudadania>
-        <EstadoReserva>ACTIVE</EstadoReserva>
-        <ExencionImpuestos></ExencionImpuestos>
-        <BookingReference></BookingReference>
-        <CodigoFiscal></CodigoFiscal>
-        <IDFechaEmision>2024-01-31</IDFechaEmision>
-        <NumeroTelefono>+48505691788</NumeroTelefono>
-        <Email>kamil.krupa@yahoo.com</Email>
-        <NumeroVisa></NumeroVisa>
-        <ProvinciaResidencia></ProvinciaResidencia>
-        <TipoDocumento>ES_I</TipoDocumento>
-      </tns1:SolicitudEncuesta>
-    </wsdl:part>
-  </wsdl:message>
-  
-  <wsdl:message name="procesarSolicitudEncuestaResponse">
-    <wsdl:part name="procesarSolicitudEncuestaReturn" element="tns2:RespuestaSolicitudEncuesta">
-      <tns2:RespuestaSolicitudEncuesta>
-        <Propiedad>Hotel Estepona Plaza</Propiedad>
-        <CiudadNacimiento>PL</CiudadNacimiento>
-        <DireccionResidencia></DireccionResidencia>
-        <FechaSalida>25-08-2024</FechaSalida>
-        <PaisResidencia>Poland</PaisResidencia>
-        <NochesEstancia>1</NochesEstancia>
-        <FechaEntrada>24-08-2024</FechaEntrada>
-        <CodigoPostalResidencia></CodigoPostalResidencia>
-        <Nombre>Katarzyna</Nombre>
-        <PrimerApellido>Krupa</PrimerApellido>
-        <PaisNacimiento></PaisNacimiento>
-        <NumeroDocumento>CDI501166</NumeroDocumento>
-        <Nacionalidad>Poland</Nacionalidad>
-        <FechaNacimiento>1987-10-06</FechaNacimiento>
-        <NombreCompleto>Katarzyna Krupa</NombreCompleto>
-        <SegundoApellido></SegundoApellido>
-        <Sexo>F</Sexo>
-        <CiudadResidencia></CiudadResidencia>
-        <Ciudadania></Ciudadania>
-        <EstadoReserva>ACTIVE</EstadoReserva>
-        <ExencionImpuestos></ExencionImpuestos>
-        <BookingReference></BookingReference>
-        <CodigoFiscal></CodigoFiscal>
-        <IDFechaEmision>2016-10-04</IDFechaEmision>
-        <NumeroTelefono>+48504296446</NumeroTelefono>
-        <Email>kamil.krupa@yahoo.com</Email>
-        <NumeroVisa></NumeroVisa>
-        <ProvinciaResidencia></ProvinciaResidencia>
-        <TipoDocumento>ES_I</TipoDocumento>
-      </tns2:RespuestaSolicitudEncuesta>
-    </wsdl:part>
-  </wsdl:message>
-  
-  <wsdl:portType name="SolicitudEncuestaWS">
-    <wsdl:operation name="procesarSolicitudEncuesta" parameterOrder="oSolicitudEncuesta">
-      <wsdl:input name="procesarSolicitudEncuestaRequest" message="impl:procesarSolicitudEncuestaRequest"/>
-      <wsdl:output name="procesarSolicitudEncuestaResponse" message="impl:procesarSolicitudEncuestaResponse"/>
-    </wsdl:operation>
-  </wsdl:portType>
-  
-  <wsdl:binding name="ServicioXmlTurismoSoapBinding" type="impl:SolicitudEncuestaWS">
-    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="procesarSolicitudEncuesta">
-      <wsdlsoap:operation/>
-      <wsdl:input name="procesarSolicitudEncuestaRequest">
-        <wsdlsoap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output name="procesarSolicitudEncuestaResponse">
-        <wsdlsoap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  
-  <wsdl:service name="SolicitudEncuestaWSService">
-    <wsdl:port name="ServicioXmlTurismo" binding="impl:ServicioXmlTurismoSoapBinding">
-      <wsdlsoap:address location="https://arce.ine.es/ARCE/services/ServicioXmlTurismo"/>
-    </wsdl:port>
-  </wsdl:service>
-  
-</wsdl:definitions>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sol="https://arce.ine.es/ARCE/ficheros/SolicitudEncuesta.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sol:SolicitudEncuesta>
+         <CabeceraSolicitud>
+            <NumeroOrden>info_required</NumeroOrden>
+            <CodigoControl>info_required</CodigoControl>
+            <CorreoElectronico>email</CorreoElectronico>
+         </CabeceraSolicitud>
+         <Encuesta xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   </soapenv:Body>
+</soapenv:Envelope>
